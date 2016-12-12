@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @list.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @list.link %>
+</p>
+
+<p>
+  <strong>Fecha de creación:</strong>
+  <%= @list.creation_date %>
+</p>
+
+<p>
+  <strong>Fecha de última modificación:</strong>
+  <%= @list.last_modification_date %>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Atrás', lists_path %>

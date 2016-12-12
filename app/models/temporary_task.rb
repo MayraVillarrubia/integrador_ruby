@@ -1,0 +1,2 @@
+class TemporaryTask < ApplicationRecord
+end

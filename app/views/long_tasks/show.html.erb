@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Percentage completion:</strong>
+  <%= @long_task.percentage_completion %>
+</p>
+
+<%= link_to 'Edit', edit_long_task_path(@long_task) %> |
+<%= link_to 'Back', long_tasks_path %>

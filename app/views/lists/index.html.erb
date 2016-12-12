@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<h2> Crear Lista </h2>
+<%= form_tag({:controller => "lists", :action => "index"}, :method => "post") do %>
+  <%= label_tag "Nombre lista" %>
+  <%=text_field_tag "nombre", "", :size => 20, :maxlenght => 20, :placeholder => "Introduzca un nombre", :required => "required" %>
+    <br />
+    <%= submit_tag "Crear lista" %>
+  <% end %>
+
+<h1>Últimas Listas Creadas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Link</th>
+      <!--<th>Creation date</th>
+      <th>Last modification date</th> -->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.name %></td>
+        <td><%= list.link %></td>
+        <!--<td><%= list.creation_date %></td>
+        <td><%= list.last_modification_date %></td> -->
+        <td><%= link_to 'Ver', list %></td>
+        <td><%= link_to 'Editar', edit_list_path(list) %></td>
+        <!--<td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New List', new_list_path %>

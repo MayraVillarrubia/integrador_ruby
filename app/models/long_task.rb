@@ -1,0 +1,2 @@
+class LongTask < ApplicationRecord
+end

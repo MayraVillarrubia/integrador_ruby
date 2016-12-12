@@ -1,0 +1,8 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: trabajo_integrador_development
+  username: root
+  password: mayra10087/3
+  host: localhost
+
